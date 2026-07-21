@@ -1,3 +1,4 @@
+
 <html lang="zh-Hant">
 <head>
   <meta charset="utf-8">
@@ -19,6 +20,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
+  <style>
+    .nav-two-rows {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-end;
+    }
+    .nav-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+  </style>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org/",
@@ -27,7 +42,7 @@
     "image": [
       "https://hagicatyu-netizen.github.io/99egg-rolls/images/hero-egg-rolls.jpg"
     ],
-    "description": "以放牧蛋與台灣小農原料，做成減糖、獨立包装的日常蛋香。",
+    "description": "以放牧蛋與台灣小農原料，做成減糖、獨立包裝的日常蛋香。",
     "brand": {
       "@type": "Brand",
       "name": "九月九"
@@ -91,11 +106,15 @@
     <a class="brand" href="#top" aria-label="九月九天長地久蛋捲首頁">
       <img src="images/site-logo.jpg" alt="九月九天長地久蛋捲品牌標誌" width="120" height="40">
     </a>
-    <nav class="nav-links">
-      <a class="nav-cta" href="https://youtube.com/shorts/-fn7AMiMKU4" target="_blank" rel="noopener">品牌故事 ↗</a>
-      <a class="nav-cta" href="https://youtu.be/bBZTvwnFmNA" target="_blank" rel="noopener">人生四好 ↗</a>
-      <a class="nav-cta" href="https://youtube.com/shorts/WIMnXhA2SMg" target="_blank" rel="noopener">吉祥物九九狐 ↗</a>
-      <a class="button-nav" href="#order">立即預購</a>
+    <nav class="nav-links nav-two-rows">
+      <div class="nav-row">
+        <a class="nav-cta" href="https://youtube.com/shorts/-fn7AMiMKU4" target="_blank" rel="noopener">品牌故事 ↗</a>
+        <a class="nav-cta" href="https://youtube.com/bBZTvwnFmNA" target="_blank" rel="noopener">人生四好 ↗</a>
+      </div>
+      <div class="nav-row">
+        <a class="nav-cta" href="https://youtube.com/shorts/WIMnXhA2SMg" target="_blank" rel="noopener">吉祥物九九狐 ↗</a>
+        <a class="button-nav" href="#order">立即預購</a>
+      </div>
     </nav>
   </header>
 
