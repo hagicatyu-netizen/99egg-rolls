@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>九月九天長地久蛋捲</title>
+    <link>https://hagicatyu-netizen.github.io/99egg-rolls/</link>
+    <atom:link href="https://hagicatyu-netizen.github.io/99egg-rolls/feed.xml" rel="self" type="application/rss+xml" />
+    <description>台灣放牧蛋手工蛋捲・減糖獨立包裝・最新消息與預購資訊</description>
+    <language>zh-TW</language>
+    <lastBuildDate>Tue, 22 Jul 2026 07:53:00 +0800</lastBuildDate>
+
+    <item>
+      <title>本週預購開跑：兩盒含運組 NT$599</title>
+      <link>https://hagicatyu-netizen.github.io/99egg-rolls/#order</link>
+      <guid isPermaLink="false">99egg-2026-07-22-preorder</guid>
+      <pubDate>Tue, 22 Jul 2026 09:00:00 +0800</pubDate>
+      <description>減糖配方、單支獨立防潮包裝。台灣放牧蛋與小農原料，接單後新鮮現做。兩盒含運組 NT$599，預購登記中。</description>
+    </item>
+
+    <item>
+      <title>出貨資訊：每週三結單，週五新鮮現做寄出</title>
+      <link>https://hagicatyu-netizen.github.io/99egg-rolls/#order</link>
+      <guid isPermaLink="false">99egg-2026-07-22-shipping</guid>
+      <pubDate>Tue, 22 Jul 2026 08:30:00 +0800</pubDate>
+      <description>每週三結單，每週五新鮮現做寄出，預計 2-3 天送達。常溫保存期限 14 天，請儘速享用。</description>
+    </item>
+
+    <item>
+      <title>產品介紹：減糖獨立包裝版蛋捲</title>
+      <link>https://hagicatyu-netizen.github.io/99egg-rolls/</link>
+      <guid isPermaLink="false">99egg-2026-07-22-product</guid>
+      <pubDate>Tue, 22 Jul 2026 08:00:00 +0800</pubDate>
+      <description>每盒 5 支獨立包裝，主要成分為台灣放牧雞蛋、嚴選麵粉、無鹽奶油、純蔗糖、海鹽。無添加香精與人工色素。</description>
+    </item>
+  </channel>
+</rss>
