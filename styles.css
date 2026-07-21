@@ -2,4 +2,5 @@
 .hero-art img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
 .brand{height:56px;display:flex;align-items:center}.brand img{display:block;width:56px;height:56px;object-fit:contain;border-radius:50%}
 .nav .brand{flex:0 0 56px;width:56px;height:56px;overflow:hidden}.nav .brand img{width:56px!important;height:56px!important;max-width:56px;max-height:56px;object-fit:contain}@media(max-width:720px){.nav .brand{flex-basis:44px;width:44px;height:44px}.nav .brand img{width:44px!important;height:44px!important;max-width:44px;max-height:44px}}
+.solution-art{overflow:hidden;background:#f0d8ad}.solution-art img{display:block;width:100%;height:100%;object-fit:contain}
 .hero-art{height:auto;aspect-ratio:1400 / 1125;border-radius:24px;background:#f0d8ad}.hero-art img{object-fit:contain}
