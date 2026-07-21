@@ -50,7 +50,7 @@
     img { max-width: 100%; height: auto; display: block; }
     .container { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
 
-    /* ========== Header 響應式佈局 (Flexbox) ========== */
+    /* ========== Header 響應式佈局 ========== */
     header {
       position: sticky;
       top: 0;
@@ -78,7 +78,7 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 12px;
     }
 
     .nav-btn {
@@ -98,26 +98,27 @@
       padding: 8px 16px;
       border-radius: 20px;
       font-weight: 600;
-      white-space: nowrap; /* 避免文字斷行 */
+      white-space: nowrap;
       display: inline-block;
     }
     .btn-cta:hover { background-color: var(--primary-dark); }
 
-    /* ========== 手工網頁 / 手機版適應 RWD ========== */
+    /* ========== RWD 手機版適應 ========== */
     @media (max-width: 768px) {
-      .desktop-only { display: none !important; } /* 手機版隱藏非必要按鈕，保持乾淨 */
+      .desktop-nav { display: none !important; } /* 桌機頂部選單在手機隱藏，移至頁面內容區 */
       .hero-grid { flex-direction: column-reverse !important; }
       .hero-text { text-align: center; }
       .hero h1 { font-size: 1.75rem !important; }
       .card-grid { flex-direction: column !important; }
+      .brand-videos { flex-direction: column !important; }
       .order-grid { flex-direction: column !important; }
       .order-info { margin-bottom: 25px; }
       .specs-table th, .specs-table td { display: block; width: 100%; }
       .specs-table th { background: #efe6dc; }
     }
 
-    /* ========== Hero 與內容區塊 (Flexbox) ========== */
-    .hero { padding: 40px 0; }
+    /* ========== Hero & 內容區塊 ========== */
+    .hero { padding: 40px 0 20px; }
     .hero-grid { display: flex; align-items: center; gap: 30px; }
     .hero-text, .hero-img { flex: 1; }
     .hero-img img { border-radius: var(--radius); box-shadow: var(--shadow); }
@@ -125,7 +126,49 @@
     .hero h1 { font-size: 2.2rem; line-height: 1.3; color: var(--primary-dark); margin: 10px 0 16px; }
     .hero p { color: var(--text-muted); margin-bottom: 24px; }
 
-    .section { padding: 50px 0; }
+    /* ========== 品牌影片按鈕區塊 (手機版主要位置) ========== */
+    .video-section {
+      background: #FFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin: 20px 0 40px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+    .video-section h3 {
+      font-size: 1.1rem;
+      color: var(--primary-dark);
+      margin-bottom: 15px;
+    }
+    .brand-videos {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+    .video-card-btn {
+      flex: 1;
+      background: var(--bg-cream);
+      border: 1px solid var(--border-color);
+      padding: 12px 15px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--primary-dark);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .video-card-btn:hover {
+      background: var(--primary);
+      color: #FFF;
+      border-color: var(--primary);
+    }
+
+    .section { padding: 40px 0; }
     .section-title { text-align: center; margin-bottom: 30px; }
     .section-title h2 { font-size: 1.7rem; color: var(--primary-dark); }
 
@@ -141,7 +184,7 @@
     .card-num { font-size: 1.2rem; font-weight: 800; color: var(--accent); margin-bottom: 8px; }
     .card-col h3 { font-size: 1.1rem; color: var(--primary-dark); margin-bottom: 8px; }
 
-    /* ========== 產品規格與表單 ========== */
+    /* ========== 規格與預購區塊 ========== */
     .specs-box { background: #FFF; border-radius: var(--radius); padding: 20px; border: 1px solid var(--border-color); }
     .specs-table { width: 100%; border-collapse: collapse; }
     .specs-table th, .specs-table td { padding: 12px; border-bottom: 1px solid var(--border-color); text-align: left; }
@@ -158,7 +201,7 @@
     .faq-item { background: #FFF; border: 1px solid var(--border-color); border-radius: 8px; margin-bottom: 10px; padding: 15px; }
     .faq-question { font-weight: 600; color: var(--primary-dark); margin-bottom: 6px; }
 
-    /* Lightbox Modal */
+    /* Lightbox Video Modal */
     .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; }
     .modal-content { position: relative; width: 90%; max-width: 600px; margin: 100px auto; background: #000; border-radius: var(--radius); overflow: hidden; }
     .close-modal { position: absolute; top: 10px; right: 15px; color: #FFF; font-size: 28px; cursor: pointer; z-index: 1001; }
@@ -177,9 +220,9 @@
         <span>九月九蛋捲</span>
       </a>
       <div class="nav-links">
-        <button class="nav-btn desktop-only" onclick="openVideoModal('https://www.youtube.com/embed/-fn7AMiMKU4')">品牌故事 🎥</button>
-        <button class="nav-btn desktop-only" onclick="openVideoModal('https://www.youtube.com/embed/bBZTvwnFmNA')">人生四好 🎥</button>
-        <button class="nav-btn desktop-only" onclick="openVideoModal('https://www.youtube.com/embed/WIMnXhA2SMg')">九九狐 🎥</button>
+        <button class="nav-btn desktop-nav" onclick="openVideoModal('https://www.youtube.com/embed/-fn7AMiMKU4')">品牌故事 🎥</button>
+        <button class="nav-btn desktop-nav" onclick="openVideoModal('https://www.youtube.com/embed/bBZTvwnFmNA')">人生四好 🎥</button>
+        <button class="nav-btn desktop-nav" onclick="openVideoModal('https://www.youtube.com/embed/WIMnXhA2SMg')">九九狐 🎥</button>
         <a href="#order" class="btn-cta">立即預購</a>
       </div>
     </div>
@@ -197,6 +240,21 @@
         <div class="hero-img">
           <img src="images/hero-egg-rolls.jpg" alt="九月九天長地久蛋捲禮盒與蛋捲展示">
         </div>
+      </div>
+    </section>
+
+    <section class="video-section">
+      <h3>🎬 認識九月九天長地久</h3>
+      <div class="brand-videos">
+        <button class="video-card-btn" onclick="openVideoModal('https://www.youtube.com/embed/-fn7AMiMKU4')">
+          ▶ 品牌故事
+        </button>
+        <button class="video-card-btn" onclick="openVideoModal('https://www.youtube.com/embed/bBZTvwnFmNA')">
+          ▶ 人生四好
+        </button>
+        <button class="video-card-btn" onclick="openVideoModal('https://www.youtube.com/embed/WIMnXhA2SMg')">
+          ▶ 吉祥物九九狐
+        </button>
       </div>
     </section>
 
