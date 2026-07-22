@@ -54,6 +54,10 @@
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: var(--font-family);
             background-color: var(--bg-warm);
@@ -108,12 +112,13 @@
 
         .nav-links {
             display: flex;
-            gap: 20px;
+            gap: 18px;
             list-style: none;
+            align-items: center;
         }
 
         .nav-links a {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-weight: 500;
         }
 
@@ -228,6 +233,34 @@
             font-size: 0.95rem;
         }
 
+        /* 品牌故事區塊 (含品牌故事、人生四好、吉祥物九九狐) */
+        .brand-section {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 60px;
+        }
+
+        .brand-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .brand-item {
+            padding: 20px;
+            background: var(--bg-warm);
+            border-radius: 12px;
+        }
+
+        .brand-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
         /* 規格表格 */
         .specs-section {
             background: #fff;
@@ -257,7 +290,7 @@
             font-weight: 600;
         }
 
-        /* 預購表單區塊 */
+        /* 預購表單區塊 (核心轉換區) */
         .order-section {
             background: #fff;
             border: 2px solid var(--primary-color);
@@ -508,8 +541,9 @@
                 <span>九月九蛋捲</span>
             </a>
             <ul class="nav-links">
-                <li><a href="#features">產品特色</a></li>
-                <li><a href="#specs">產品規格</a></li>
+                <li><a href="#brand-story">品牌故事 ↗</a></li>
+                <li><a href="#four-goods">人生四好 ↗</a></li>
+                <li><a href="#mascot">吉祥物九九狐 ↗</a></li>
                 <li><a href="#faq">常見問題</a></li>
                 <li><a href="#order" class="btn-header">立即預購</a></li>
             </ul>
@@ -549,6 +583,26 @@
                     <div class="feature-num">03</div>
                     <h3>大包裝吃不完易軟掉？</h3>
                     <p>單支獨立防潮包裝，想吃再拆，時刻保持酥脆好滋味與衛生衛生不沾手。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="brand-section" id="brand-story">
+            <div class="section-title">
+                <h2>認識九月九天長地久</h2>
+            </div>
+            <div class="brand-grid">
+                <div class="brand-item" id="story-content">
+                    <h3>▶ 品牌故事</h3>
+                    <p>九月九代表著天長地久，我們希望用最純粹的食材，做出一份能長久陪伴大家生活的安心好滋味。嚴選放牧雞蛋，少一點負擔，多一點溫暖。</p>
+                </div>
+                <div class="brand-item" id="four-goods">
+                    <h3>▶ 人生四好</h3>
+                    <p>吃得好、睡得好、笑得好、過得好。讓每一口酥脆的蛋捲，成為您繁忙生活裡微小而確切的幸福儀式。</p>
+                </div>
+                <div class="brand-item" id="mascot">
+                    <h3>▶ 吉祥物九九狐</h3>
+                    <p>靈動可愛的九九狐是品牌的守護者，傳遞著天然、純真與陪伴的品牌精神，為每一份禮盒送上最誠摯的祝福。</p>
                 </div>
             </div>
         </section>
