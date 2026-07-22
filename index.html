@@ -1,706 +1,367 @@
+
+
 <html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>九月九天長地久蛋捲｜台灣放牧蛋手工蛋捲・健康減糖伴手禮</title>
-    <meta name="description" content="九月九天長地久蛋捲以台灣放牧蛋與小農原料製作，堅持減糖、獨立包裝。接單後新鮮現做，常溫14天最佳賞味期，新鮮直送。">
-    <meta name="keywords" content="九月九蛋捲, 放牧蛋蛋捲, 減糖蛋捲, 手工蛋捲, 伴手禮推薦, 獨立包裝蛋捲">
-
-    <meta property="og:title" content="九月九天長地久蛋捲｜台灣放牧蛋手工蛋捲">
-    <meta property="og:description" content="減糖調配、獨立包裝，嚴選台灣在地放牧蛋與小農麵粉，接單新鮮現做。">
-    <meta property="og:image" content="images/hero-egg-rolls.jpg">
-    <meta property="og:type" content="website">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": "九月九天長地久蛋捲（減糖獨立包裝版 - 兩盒組）",
-      "image": [
-        "images/hero-egg-rolls.jpg"
-      ],
-      "description": "以放牧蛋與台灣小農原料，做成減糖、獨立包裝的日常蛋香。接單後新鮮現做。",
-      "brand": {
-        "@type": "Brand",
-        "name": "九月九天長地久"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://hagicatyu-netizen.github.io/99egg-rolls/#order",
-        "priceCurrency": "TWD",
-        "price": "599",
-        "availability": "https://schema.org/InStock",
-        "itemCondition": "https://schema.org/NewCondition"
-      }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>九月九天長地久蛋捲｜台灣放牧蛋手工蛋捲・健康伴手禮推薦</title>
+  <meta name="description" content="九月九天長地久蛋捲採用台灣在地放牧蛋與小農原料，減糖無香精無色素，獨立包裝採接單後新鮮現做。兩盒含運優惠中！">
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "九月九天長地久蛋捲・兩盒含運組",
+    "image": "images/hero-egg-rolls.jpg",
+    "description": "以台灣放牧蛋與小農原料製作，減糖、無添加香精色素之手工蛋捲。",
+    "brand": { "@type": "Brand", "name": "九月九天長地久" },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://hagicatyu-netizen.github.io/99egg-rolls/#order",
+      "priceCurrency": "TWD",
+      "price": "599",
+      "availability": "https://schema.org/InStock"
     }
-    </script>
-
-    <style>
-        :root {
-            --primary-color: #A0522D; /* 暖陶土棕色系 */
-            --primary-hover: #8B4513;
-            --accent-color: #E67E22;
-            --bg-warm: #FAF8F5;
-            --card-bg: #FFFFFF;
-            --text-main: #333333;
-            --text-muted: #666666;
-            --border-color: #E2D9D0;
-            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: var(--font-family);
-            background-color: var(--bg-warm);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding-bottom: 70px; /* 為手機版底部浮動列預留空間 */
-        }
-
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        a:hover {
-            color: var(--primary-hover);
-        }
-
-        /* Header 導覽列 */
-        header {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(5px);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .nav-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 12px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            color: var(--primary-color);
-        }
-
-        .logo img {
-            height: 36px;
-            width: auto;
-            border-radius: 50%;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 18px;
-            list-style: none;
-            align-items: center;
-        }
-
-        .nav-links a {
-            font-size: 0.9rem;
-            font-weight: 500;
-            cursor: pointer;
-        }
-
-        .btn-header {
-            background-color: var(--primary-color);
-            color: #fff !important;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            transition: background-color 0.2s;
-        }
-
-        .btn-header:hover {
-            background-color: var(--primary-hover);
-        }
-
-        /* 全域容器 */
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        /* Hero 主視覺區 */
-        .hero {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-            padding: 20px 0 60px 0;
-        }
-
-        .hero-tag {
-            display: inline-block;
-            background-color: #FDF3E7;
-            color: var(--primary-color);
-            font-size: 0.85rem;
-            font-weight: 600;
-            padding: 4px 12px;
-            border-radius: 12px;
-            margin-bottom: 12px;
-            letter-spacing: 1px;
-        }
-
-        .hero h1 {
-            font-size: 2rem;
-            line-height: 1.3;
-            margin-bottom: 16px;
-            color: #222;
-        }
-
-        .hero p {
-            color: var(--text-muted);
-            margin-bottom: 24px;
-            font-size: 1.05rem;
-        }
-
-        .hero-img img {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-            object-fit: cover;
-        }
-
-        /* 特色區塊 */
-        .section-title {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .section-title h2 {
-            font-size: 1.6rem;
-            color: var(--primary-color);
-            margin-bottom: 8px;
-        }
-
-        .section-title p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-bottom: 60px;
-        }
-
-        .feature-card {
-            background: var(--card-bg);
-            padding: 28px;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
-        }
-
-        .feature-num {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--accent-color);
-            margin-bottom: 10px;
-        }
-
-        .feature-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        .feature-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        /* 規格表格 */
-        .specs-section {
-            background: #fff;
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            margin-bottom: 60px;
-        }
-
-        .specs-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-
-        .specs-table th, .specs-table td {
-            padding: 12px 16px;
-            text-align: left;
-            border-bottom: 1px solid var(--border-color);
-            font-size: 0.95rem;
-        }
-
-        .specs-table th {
-            width: 25%;
-            background-color: var(--bg-warm);
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-
-        /* Google 表單容器區塊 */
-        .order-section {
-            background: #fff;
-            border: 2px solid var(--primary-color);
-            border-radius: 16px;
-            padding: 35px 20px;
-            box-shadow: 0 10px 30px rgba(160, 82, 45, 0.08);
-            margin-bottom: 60px;
-        }
-
-        .order-header {
-            text-align: center;
-            border-bottom: 1px dashed var(--border-color);
-            padding-bottom: 20px;
-            margin-bottom: 25px;
-        }
-
-        .price-badge {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: var(--primary-color);
-            margin: 10px 0;
-        }
-
-        .price-badge span {
-            font-size: 0.9rem;
-            font-weight: normal;
-            color: var(--text-muted);
-        }
-
-        .order-features {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-bottom: 15px;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-
-        .order-features li::before {
-            content: "✓ ";
-            color: var(--accent-color);
-            font-weight: bold;
-        }
-
-        .google-form-container {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-
-        .google-form-container iframe {
-            width: 100%;
-            max-width: 640px;
-            height: 800px;
-            border: none;
-            border-radius: 8px;
-        }
-
-        /* FAQ 手風琴選單 */
-        .faq-section {
-            margin-bottom: 60px;
-        }
-
-        .faq-item {
-            background: #fff;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            margin-bottom: 12px;
-            overflow: hidden;
-        }
-
-        .faq-question {
-            width: 100%;
-            text-align: left;
-            padding: 16px 20px;
-            background: none;
-            border: none;
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--text-main);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-        }
-
-        .faq-answer {
-            padding: 0 20px 16px 20px;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            display: none;
-        }
-
-        .faq-item.active .faq-answer {
-            display: block;
-        }
-
-        .faq-item.active .faq-icon {
-            transform: rotate(180deg);
-        }
-
-        .faq-icon {
-            transition: transform 0.2s;
-        }
-
-        /* YouTube 浮動視窗 (Modal Pop-up) 樣式 */
-        .video-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.75);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            backdrop-filter: blur(4px);
-        }
-
-        .video-modal.active {
-            display: flex;
-        }
-
-        .modal-content {
-            position: relative;
-            background-color: #000;
-            width: 100%;
-            max-width: 800px;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 比例 */
-            height: 0;
-            overflow: hidden;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        .close-modal-btn {
-            position: absolute;
-            top: -40px;
-            right: 0;
-            color: #fff;
-            font-size: 2rem;
-            font-weight: bold;
-            cursor: pointer;
-            background: none;
-            border: none;
-            line-height: 1;
-        }
-
-        /* 手機版固定底部購買列 */
-        .sticky-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: #ffffff;
-            border-top: 1px solid var(--border-color);
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 -4px 12px rgba(0,0,0,0.08);
-            z-index: 99;
-        }
-
-        .sticky-info {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .sticky-title {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        .sticky-price {
-            font-size: 1.1rem;
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-
-        .sticky-btn {
-            background-color: var(--primary-color);
-            color: #fff;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 0.95rem;
-        }
-
-        /* 頁尾 */
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            background-color: #EFECE6;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            border-top: 1px solid var(--border-color);
-        }
-
-        /* RWD 響應式調整 */
-        @media (max-width: 768px) {
-            .hero {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .specs-table th, .specs-table td {
-                display: block;
-                width: 100%;
-            }
-
-            .specs-table th {
-                background-color: transparent;
-                padding-bottom: 2px;
-            }
-
-            .specs-table td {
-                padding-top: 0;
-            }
-        }
-
-        @media (min-width: 769px) {
-            .sticky-bar {
-                display: none;
-            }
-        }
-    </style>
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #8C5A3C;
+      --primary-dark: #6A4026;
+      --accent: #D9822B;
+      --bg-cream: #FDFBF7;
+      --bg-card: #FFFFFF;
+      --text-dark: #332C27;
+      --text-muted: #7A6F68;
+      --border-color: #EFE6DC;
+      --shadow: 0 8px 24px rgba(140, 90, 60, 0.08);
+      --radius: 12px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, "Noto Sans TC", sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+    /* ========== Header 響應式佈局 ========== */
+    header {
+      position: sticky;
+      top: 0;
+      background-color: rgba(253, 251, 247, 0.98);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 100;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-area img { height: 38px; width: auto; }
+    .logo-area span { font-size: 1.1rem; font-weight: 700; color: var(--primary); white-space: nowrap; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-btn {
+      background: none;
+      border: none;
+      color: var(--text-dark);
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .nav-btn:hover { color: var(--accent); }
+
+    .btn-cta {
+      background-color: var(--primary);
+      color: #FFF !important;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 600;
+      white-space: nowrap;
+      display: inline-block;
+    }
+    .btn-cta:hover { background-color: var(--primary-dark); }
+
+    /* ========== RWD 手機版適應 ========== */
+    @media (max-width: 768px) {
+      .desktop-nav { display: none !important; } /* 桌機頂部選單在手機隱藏，移至頁面內容區 */
+      .hero-grid { flex-direction: column-reverse !important; }
+      .hero-text { text-align: center; }
+      .hero h1 { font-size: 1.75rem !important; }
+      .card-grid { flex-direction: column !important; }
+      .brand-videos { flex-direction: column !important; }
+      .order-grid { flex-direction: column !important; }
+      .order-info { margin-bottom: 25px; }
+      .specs-table th, .specs-table td { display: block; width: 100%; }
+      .specs-table th { background: #efe6dc; }
+    }
+
+    /* ========== Hero & 內容區塊 ========== */
+    .hero { padding: 40px 0 20px; }
+    .hero-grid { display: flex; align-items: center; gap: 30px; }
+    .hero-text, .hero-img { flex: 1; }
+    .hero-img img { border-radius: var(--radius); box-shadow: var(--shadow); }
+    .tagline { color: var(--accent); font-size: 0.85rem; font-weight: 700; letter-spacing: 1px; }
+    .hero h1 { font-size: 2.2rem; line-height: 1.3; color: var(--primary-dark); margin: 10px 0 16px; }
+    .hero p { color: var(--text-muted); margin-bottom: 24px; }
+
+    /* ========== 品牌影片按鈕區塊 (手機版主要位置) ========== */
+    .video-section {
+      background: #FFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin: 20px 0 40px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+    .video-section h3 {
+      font-size: 1.1rem;
+      color: var(--primary-dark);
+      margin-bottom: 15px;
+    }
+    .brand-videos {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+    .video-card-btn {
+      flex: 1;
+      background: var(--bg-cream);
+      border: 1px solid var(--border-color);
+      padding: 12px 15px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--primary-dark);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .video-card-btn:hover {
+      background: var(--primary);
+      color: #FFF;
+      border-color: var(--primary);
+    }
+
+    .section { padding: 40px 0; }
+    .section-title { text-align: center; margin-bottom: 30px; }
+    .section-title h2 { font-size: 1.7rem; color: var(--primary-dark); }
+
+    .card-grid { display: flex; gap: 20px; }
+    .card-col {
+      flex: 1;
+      background: var(--bg-card);
+      padding: 24px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow);
+    }
+    .card-num { font-size: 1.2rem; font-weight: 800; color: var(--accent); margin-bottom: 8px; }
+    .card-col h3 { font-size: 1.1rem; color: var(--primary-dark); margin-bottom: 8px; }
+
+    /* ========== 規格與預購區塊 ========== */
+    .specs-box { background: #FFF; border-radius: var(--radius); padding: 20px; border: 1px solid var(--border-color); }
+    .specs-table { width: 100%; border-collapse: collapse; }
+    .specs-table th, .specs-table td { padding: 12px; border-bottom: 1px solid var(--border-color); text-align: left; }
+
+    .order-section { background-color: #F5ECE3; border-radius: var(--radius); padding: 30px 20px; margin: 30px 0; }
+    .order-grid { display: flex; gap: 30px; }
+    .order-info, .order-form-container { flex: 1; }
+    .order-form-container { background: #FFF; padding: 20px; border-radius: var(--radius); box-shadow: var(--shadow); }
+    .price-tag { font-size: 2rem; font-weight: 800; color: var(--accent); margin: 10px 0; }
+    .badge-list { list-style: none; margin-bottom: 15px; }
+    .badge-list li::before { content: "✓ "; color: var(--accent); font-weight: bold; }
+
+    /* FAQ */
+    .faq-item { background: #FFF; border: 1px solid var(--border-color); border-radius: 8px; margin-bottom: 10px; padding: 15px; }
+    .faq-question { font-weight: 600; color: var(--primary-dark); margin-bottom: 6px; }
+
+    /* Lightbox Video Modal */
+    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; }
+    .modal-content { position: relative; width: 90%; max-width: 600px; margin: 100px auto; background: #000; border-radius: var(--radius); overflow: hidden; }
+    .close-modal { position: absolute; top: 10px; right: 15px; color: #FFF; font-size: 28px; cursor: pointer; z-index: 1001; }
+    .video-container { position: relative; padding-bottom: 56.25%; height: 0; }
+    .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+
+    footer { text-align: center; padding: 30px 0; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid var(--border-color); }
+  </style>
 </head>
 <body>
 
-    <header>
-        <div class="nav-container">
-            <a href="#top" class="logo">
-                <img src="images/site-logo.jpg" alt="九月九蛋捲標誌" onerror="this.style.display='none'">
-                <span>九月九蛋捲</span>
-            </a>
-            <ul class="nav-links">
-                <li><a onclick="openVideoModal('-fn7AMiMKU4')">品牌故事 ↗</a></li>
-                <li><a onclick="openVideoModal('bBZTvwnFmNA')">人生四好 ↗</a></li>
-                <li><a onclick="openVideoModal('WIMnXhA2SMg')">吉祥物九九狐 ↗</a></li>
-                <li><a href="#faq">常見問題</a></li>
-                <li><a href="#order" class="btn-header">立即預購</a></li>
-            </ul>
-        </div>
-    </header>
-
-    <main class="container" id="top">
-        <section class="hero">
-            <div class="hero-content">
-                <span class="hero-tag">NATURAL EGG ROLLS · TAIWAN</span>
-                <h1>下午嘴饞，想吃蛋捲<br>也想吃得更安心。</h1>
-                <p>以放牧蛋與台灣小農原料，做成減糖、獨立包裝的日常蛋香。接單後新鮮現做，一盒留給自己，一盒送給重要的人。</p>
-                <a href="#order" class="submit-btn" style="display: inline-block; width: auto; text-align: center; padding: 12px 32px; background-color: var(--primary-color); color: #fff; border-radius: 8px; font-weight: bold;">預購兩盒含運組 NT$599 ➔</a>
-            </div>
-            <div class="hero-img">
-                <img src="images/hero-egg-rolls.jpg" alt="九月九天長地久蛋捲禮盒與蛋捲展示" loading="eager">
-            </div>
-        </section>
-
-        <section class="features-section" id="features">
-            <div class="section-title">
-                <h2>一口剛好的日常</h2>
-                <p>不是不能吃零食，是不想每次都隨便選。</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-num">01</div>
-                    <h3>太甜，吃兩口就膩？</h3>
-                    <p>堅持減糖調配，帶出食材自然蛋香與奶香，輕鬆享用無負擔。</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-num">02</div>
-                    <h3>成分表看了更猶豫？</h3>
-                    <p>無添加香精與人工色素。嚴選台灣在地放牧雞蛋與優質小農麵粉。</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-num">03</div>
-                    <h3>大包裝吃不完易軟掉？</h3>
-                    <p>單支獨立防潮包裝，想吃再拆，時刻保持酥脆好滋味與衛生衛生不沾手。</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="specs-section" id="specs">
-            <div class="section-title" style="margin-bottom: 20px; text-align: left;">
-                <h2>產品規格與出貨資訊</h2>
-            </div>
-            <table class="specs-table">
-                <tr>
-                    <th>商品名稱</th>
-                    <td>九月九天長地久蛋捲（減糖獨立包裝版）</td>
-                </tr>
-                <tr>
-                    <th>產品內容</th>
-                    <td>每盒 5 支獨立包裝 / 兩盒組共 10 支</td>
-                </tr>
-                <tr>
-                    <th>主要成分</th>
-                    <td>台灣放牧雞蛋、嚴選麵粉、無鹽奶油、純蔗糖、海鹽</td>
-                </tr>
-                <tr>
-                    <th>保存期限</th>
-                    <td>常溫 14 天（接單後新鮮現做）</td>
-                </tr>
-                <tr>
-                    <th>出貨時程</th>
-                    <td>每週三結單，每週五新鮮現做寄出，預計 2-3 天送達</td>
-                </tr>
-            </table>
-        </section>
-
-        <section class="order-section" id="order">
-            <div class="order-header">
-                <h2>預購九月九蛋捲</h2>
-                <div class="price-badge">NT$ 599 <span>(含運費)</span></div>
-                <ul class="order-features">
-                    <li>台灣優質放牧蛋與小農原料</li>
-                    <li>減糖配方・獨立包裝不沾手</li>
-                    <li>接單現做直送・14天最佳賞味期</li>
-                </ul>
-            </div>
-
-            <div class="google-form-container">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScfJuKxO0L44o4K-CreO9WWoA5IUBYvYm8AIHWnjvX3CzEx8A/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
-            </div>
-        </section>
-
-        <section class="faq-section" id="faq">
-            <div class="section-title">
-                <h2>常見問題 FAQ</h2>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    Q: 蛋捲保存期限多久？
-                    <span class="faq-icon">▼</span>
-                </button>
-                <div class="faq-answer">
-                    保存期限為 14 天。採接單後新鮮現做直送，收到後請依標示儘速享用以獲得最佳口感。
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    Q: 有添加香精或人工色素嗎？
-                    <span class="faq-icon">▼</span>
-                </button>
-                <div class="faq-answer">
-                    完全無添加香精與色素！純粹呈現放牧蛋與天然奶油的自然香氣。
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    Q: 下單後多久會收到？
-                    <span class="faq-icon">▼</span>
-                </button>
-                <div class="faq-answer">
-                    我們固定每週三結單，每週五新鮮現做寄出，預計出貨後 2-3 天送達您的指定地點。
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <div class="video-modal" id="videoModal" onclick="closeVideoModal(event)">
-        <div class="modal-content">
-            <button class="close-modal-btn" onclick="closeVideoModal(event, true)">&times;</button>
-            <div class="video-container">
-                <iframe id="youtubeIframe" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
+  <header>
+    <div class="nav-container container">
+      <a href="#top" class="logo-area">
+        <img src="images/site-logo.jpg" alt="九月九天長地久蛋捲標誌">
+        <span>九月九蛋捲</span>
+      </a>
+      <div class="nav-links">
+        <button class="nav-btn desktop-nav" onclick="openVideoModal('https://www.youtube.com/embed/-fn7AMiMKU4')">品牌故事 ↗</button>
+        <button class="nav-btn desktop-nav" onclick="openVideoModal('https://www.youtube.com/embed/bBZTvwnFmNA')">人生四好 ↗</button>
+        <button class="nav-btn desktop-nav" onclick="openVideoModal('https://www.youtube.com/embed/WIMnXhA2SMg')">九九狐 ↗</button>
+        <a href="#order" class="btn-cta">立即預購</a>
+      </div>
     </div>
+  </header>
 
-    <div class="sticky-bar">
-        <div class="sticky-info">
-            <span class="sticky-title">九月九蛋捲 (兩盒組)</span>
-            <span class="sticky-price">NT$ 599 含運</span>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <span class="tagline">NATURAL EGG ROLLS · TAIWAN</span>
+          <h1>下午嘴饞，想吃蛋捲也想吃得更安心。</h1>
+          <p>以放牧蛋與台灣小農原料，做成減糖、獨立包裝的日常蛋香。接單後新鮮現做，一盒留給自己，一盒送給重要的人。</p>
+          <a href="#order" class="btn-cta" style="padding: 12px 24px; font-size: 1rem;">預購兩盒含運組 NT$599</a>
         </div>
-        <a href="#order" class="sticky-btn">前往預購 ➔</a>
+        <div class="hero-img">
+          <img src="images/hero-egg-rolls.jpg" alt="九月九天長地久蛋捲禮盒與蛋捲展示">
+        </div>
+      </div>
+    </section>
+
+    <section class="video-section">
+      <h3>↗ 認識九月九天長地久 ↗</h3>
+      <div class="brand-videos">
+        <button class="video-card-btn" onclick="openVideoModal('https://www.youtube.com/embed/-fn7AMiMKU4')">
+          ▶ 品牌故事
+        </button>
+        <button class="video-card-btn" onclick="openVideoModal('https://www.youtube.com/embed/bBZTvwnFmNA')">
+          ▶ 人生四好
+        </button>
+        <button class="video-card-btn" onclick="openVideoModal('https://www.youtube.com/embed/WIMnXhA2SMg')">
+          ▶ 吉祥物九九狐
+        </button>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <h2>一口剛好的日常</h2>
+        <p>不是不能吃零食，是不想每次都隨便選。</p>
+      </div>
+      <div class="card-grid">
+        <div class="card-col">
+          <div class="card-num">01</div>
+          <h3>太甜，吃兩口就膩？</h3>
+          <p>堅持減糖調配，帶出食材自然蛋香，輕鬆無負擔。</p>
+        </div>
+        <div class="card-col">
+          <div class="card-num">02</div>
+          <h3>成分表看了更猶豫？</h3>
+          <p>無添加香精與人工色素。嚴選台灣在地放牧蛋與小農麵粉。</p>
+        </div>
+        <div class="card-col">
+          <div class="card-num">03</div>
+          <h3>大包裝吃不完易軟掉？</h3>
+          <p>單支獨立防潮包裝，想吃再拆，時刻保持酥脆。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <h2>產品規格與出貨資訊</h2>
+      </div>
+      <div class="specs-box">
+        <table class="specs-table">
+          <tr><th>商品名稱</th><td>九月九天長地久蛋捲（減糖獨立包裝版）</td></tr>
+          <tr><th>產品內容</th><td>每盒 5 支獨立包裝 / 兩盒組共 10 支</td></tr>
+          <tr><th>主要成分</th><td>台灣放牧雞蛋、嚴選麵粉、無鹽奶油、純蔗糖、海鹽</td></tr>
+          <tr><th>保存期限</th><td>常溫 14 天（接單後新鮮現做）</td></tr>
+          <tr><th>出貨時程</th><td>每週三結單，每週五新鮮現做寄出，預計 2-3 天送達</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="order" class="order-section">
+      <div class="order-grid">
+        <div class="order-info">
+          <h2>預購九月九蛋捲</h2>
+          <div class="price-tag">NT$ 599 <span style="font-size: 1rem; color: var(--text-muted); font-weight: normal;">(含運費)</span></div>
+          <ul class="badge-list">
+            <li>台灣優質放牧蛋與小農原料</li>
+            <li>減糖配方，獨立包裝不沾手</li>
+            <li>接單現做直送，14天最佳賞味期</li>
+          </ul>
+        </div>
+        <div class="order-form-container">
+          <h3 style="margin-bottom: 12px; color: var(--primary-dark);">預購登記表單</h3>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScfJuKxO0L44o4K-CreO9WWoA5IUBYvYm8AIHWnjvX3CzEx8A/viewform?embedded=true" width="100%" height="480" frameborder="0">載入中…</iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><h2>常見問題 FAQ</h2></div>
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div class="faq-item">
+          <div class="faq-question">Q: 蛋捲保存期限多久？</div>
+          <div>保存期限為 14 天。採接單後新鮮現做直送，請依標示儘速享用。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Q: 有添加香精或人工色素嗎？</div>
+          <div>完全無添加香精與色素！純粹呈現放牧蛋與奶油自然香氣。</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 九月九天長地久蛋捲 · 健康到九十九</p>
+      <details style="margin-top: 15px;">
+        <summary>商業模式分析 (BMC)</summary>
+        <img src="images/simple-bmc.jpg" alt="BMC 商業模式分析圖" style="margin: 10px auto; max-width: 100%; border-radius: 8px;">
+      </details>
     </div>
+  </footer>
 
-    <footer>
-        <p>© 九月九天長地久蛋捲 · 健康到九十九</p>
-    </footer>
+  <div id="videoModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeVideoModal()">&times;</span>
+      <div class="video-container">
+        <iframe id="videoIframe" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
 
-    <script>
-        // FAQ 手風琴開關
-        function toggleFaq(button) {
-            const faqItem = button.parentElement;
-            faqItem.classList.toggle('active');
-        }
-
-        // 開啟 YouTube 彈跳視窗
-        function openVideoModal(videoId) {
-            const modal = document.getElementById('videoModal');
-            const iframe = document.getElementById('youtubeIframe');
-            
-            if (videoId && videoId !== 'YOUR_VIDEO_ID_1') {
-                iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-            } else {
-                // 預設示範影片（若未設定 Video ID）
-                iframe.src = `https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1`;
-            }
-            
-            modal.classList.add('active');
-        }
-
-        // 關閉 YouTube 彈跳視窗
-        function closeVideoModal(event, forceClose = false) {
-            const modal = document.getElementById('videoModal');
-            const iframe = document.getElementById('youtubeIframe');
-
-            // 點擊背景黑影或關閉按鈕時關閉視窗，並停止影片播放
-            if (forceClose || event.target === modal) {
-                modal.classList.remove('active');
-                iframe.src = ''; 
-            }
-        }
-    </script>
+  <script>
+    function openVideoModal(url) {
+      document.getElementById('videoIframe').src = url;
+      document.getElementById('videoModal').style.display = 'block';
+    }
+    function closeVideoModal() {
+      document.getElementById('videoModal').style.display = 'none';
+      document.getElementById('videoIframe').src = '';
+    }
+    window.onclick = function(e) {
+      if (e.target == document.getElementById('videoModal')) closeVideoModal();
+    }
+  </script>
 </body>
 </html>
