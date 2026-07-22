@@ -1,3 +1,4 @@
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -119,6 +120,7 @@
         .nav-links a {
             font-size: 0.9rem;
             font-weight: 500;
+            cursor: pointer;
         }
 
         .btn-header {
@@ -230,34 +232,6 @@
         .feature-card p {
             color: var(--text-muted);
             font-size: 0.95rem;
-        }
-
-        /* 品牌介紹專區 (品牌故事 / 人生四好 / 吉祥物九九狐) */
-        .brand-section {
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 16px;
-            border: 1px solid var(--border-color);
-            margin-bottom: 60px;
-        }
-
-        .brand-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 20px;
-        }
-
-        .brand-item {
-            padding: 20px;
-            background: var(--bg-warm);
-            border-radius: 12px;
-        }
-
-        .brand-item h3 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-            font-size: 1.1rem;
         }
 
         /* 規格表格 */
@@ -397,6 +371,65 @@
             transition: transform 0.2s;
         }
 
+        /* YouTube 浮動視窗 (Modal Pop-up) 樣式 */
+        .video-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            backdrop-filter: blur(4px);
+        }
+
+        .video-modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            position: relative;
+            background-color: #000;
+            width: 100%;
+            max-width: 800px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 比例 */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .close-modal-btn {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: #fff;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            background: none;
+            border: none;
+            line-height: 1;
+        }
+
         /* 手機版固定底部購買列 */
         .sticky-bar {
             position: fixed;
@@ -490,9 +523,9 @@
                 <span>九月九蛋捲</span>
             </a>
             <ul class="nav-links">
-                <li><a href="#brand-story">品牌故事 ↗</a></li>
-                <li><a href="#four-goods">人生四好 ↗</a></li>
-                <li><a href="#mascot">吉祥物九九狐 ↗</a></li>
+                <li><a onclick="openVideoModal('-fn7AMiMKU4')">品牌故事 ↗</a></li>
+                <li><a onclick="openVideoModal('bBZTvwnFmNA')">人生四好 ↗</a></li>
+                <li><a onclick="openVideoModal('WIMnXhA2SMg')">吉祥物九九狐 ↗</a></li>
                 <li><a href="#faq">常見問題</a></li>
                 <li><a href="#order" class="btn-header">立即預購</a></li>
             </ul>
@@ -532,26 +565,6 @@
                     <div class="feature-num">03</div>
                     <h3>大包裝吃不完易軟掉？</h3>
                     <p>單支獨立防潮包裝，想吃再拆，時刻保持酥脆好滋味與衛生衛生不沾手。</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="brand-section" id="brand-story">
-            <div class="section-title">
-                <h2>認識九月九天長地久</h2>
-            </div>
-            <div class="brand-grid">
-                <div class="brand-item" id="story-content">
-                    <h3>▶ 品牌故事</h3>
-                    <p>九月九代表著天長地久，我們希望用最純粹的食材，做出一份能長久陪伴大家生活的安心好滋味。嚴選放牧雞蛋，少一點負擔，多一點溫暖。</p>
-                </div>
-                <div class="brand-item" id="four-goods">
-                    <h3>▶ 人生四好</h3>
-                    <p>吃得好、睡得好、笑得好、過得好。讓每一口酥脆的蛋捲，成為您繁忙生活裡微小而確切的幸福儀式。</p>
-                </div>
-                <div class="brand-item" id="mascot">
-                    <h3>▶ 吉祥物九九狐</h3>
-                    <p>靈動可愛的九九狐是品牌的守護者，傳遞著天然、純真與陪伴的品牌精神，為每一份禮盒送上最誠摯的祝福。</p>
                 </div>
             </div>
         </section>
@@ -596,7 +609,7 @@
             </div>
 
             <div class="google-form-container">
-                <iframe src="https://docs.google.com/forms/d/1gFF2lg7FNQtPSGkr1hhNbSki3iGe1tqXJ1YNHFsnYW4?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScfJuKxO0L44o4K-CreO9WWoA5IUBYvYm8AIHWnjvX3CzEx8A/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
             </div>
         </section>
 
@@ -634,6 +647,15 @@
         </section>
     </main>
 
+    <div class="video-modal" id="videoModal" onclick="closeVideoModal(event)">
+        <div class="modal-content">
+            <button class="close-modal-btn" onclick="closeVideoModal(event, true)">&times;</button>
+            <div class="video-container">
+                <iframe id="youtubeIframe" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
     <div class="sticky-bar">
         <div class="sticky-info">
             <span class="sticky-title">九月九蛋捲 (兩盒組)</span>
@@ -651,6 +673,33 @@
         function toggleFaq(button) {
             const faqItem = button.parentElement;
             faqItem.classList.toggle('active');
+        }
+
+        // 開啟 YouTube 彈跳視窗
+        function openVideoModal(videoId) {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('youtubeIframe');
+            
+            if (videoId && videoId !== 'YOUR_VIDEO_ID_1') {
+                iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            } else {
+                // 預設示範影片（若未設定 Video ID）
+                iframe.src = `https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1`;
+            }
+            
+            modal.classList.add('active');
+        }
+
+        // 關閉 YouTube 彈跳視窗
+        function closeVideoModal(event, forceClose = false) {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('youtubeIframe');
+
+            // 點擊背景黑影或關閉按鈕時關閉視窗，並停止影片播放
+            if (forceClose || event.target === modal) {
+                modal.classList.remove('active');
+                iframe.src = ''; 
+            }
         }
     </script>
 </body>
