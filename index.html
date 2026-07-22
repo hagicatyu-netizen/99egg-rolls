@@ -1,4 +1,3 @@
-<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -233,7 +232,7 @@
             font-size: 0.95rem;
         }
 
-        /* 品牌故事區塊 (含品牌故事、人生四好、吉祥物九九狐) */
+        /* 品牌介紹專區 (品牌故事 / 人生四好 / 吉祥物九九狐) */
         .brand-section {
             background: var(--card-bg);
             padding: 40px;
@@ -290,12 +289,12 @@
             font-weight: 600;
         }
 
-        /* 預購表單區塊 (核心轉換區) */
+        /* Google 表單容器區塊 */
         .order-section {
             background: #fff;
             border: 2px solid var(--primary-color);
             border-radius: 16px;
-            padding: 35px;
+            padding: 35px 20px;
             box-shadow: 0 10px 30px rgba(160, 82, 45, 0.08);
             margin-bottom: 60px;
         }
@@ -337,60 +336,18 @@
             font-weight: bold;
         }
 
-        /* 表單控制項 */
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            margin-bottom: 16px;
-        }
-
-        .form-group.full-width {
-            grid-column: span 2;
-        }
-
-        .form-group label {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #444;
-        }
-
-        .form-group input, .form-group select, .form-group textarea {
-            padding: 10px 14px;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            font-size: 0.95rem;
-            font-family: inherit;
-            outline: none;
-            transition: border-color 0.2s;
-        }
-
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-            border-color: var(--primary-color);
-        }
-
-        .submit-btn {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 14px 28px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            border-radius: 8px;
-            cursor: pointer;
+        .google-form-container {
             width: 100%;
-            transition: background-color 0.2s;
-            margin-top: 10px;
+            display: flex;
+            justify-content: center;
         }
 
-        .submit-btn:hover {
-            background-color: var(--primary-hover);
+        .google-form-container iframe {
+            width: 100%;
+            max-width: 640px;
+            height: 800px;
+            border: none;
+            border-radius: 8px;
         }
 
         /* FAQ 手風琴選單 */
@@ -498,16 +455,8 @@
                 text-align: center;
             }
 
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .form-group.full-width {
-                grid-column: span 1;
-            }
-
             .nav-links {
-                display: none; /* 手機版簡化選單 */
+                display: none;
             }
 
             .specs-table th, .specs-table td {
@@ -527,7 +476,7 @@
 
         @media (min-width: 769px) {
             .sticky-bar {
-                display: none; /* 桌機版隱藏固定列 */
+                display: none;
             }
         }
     </style>
@@ -556,7 +505,7 @@
                 <span class="hero-tag">NATURAL EGG ROLLS · TAIWAN</span>
                 <h1>下午嘴饞，想吃蛋捲<br>也想吃得更安心。</h1>
                 <p>以放牧蛋與台灣小農原料，做成減糖、獨立包裝的日常蛋香。接單後新鮮現做，一盒留給自己，一盒送給重要的人。</p>
-                <a href="#order" class="submit-btn" style="display: inline-block; width: auto; text-align: center; padding: 12px 32px;">預購兩盒含運組 NT$599 ➔</a>
+                <a href="#order" class="submit-btn" style="display: inline-block; width: auto; text-align: center; padding: 12px 32px; background-color: var(--primary-color); color: #fff; border-radius: 8px; font-weight: bold;">預購兩盒含運組 NT$599 ➔</a>
             </div>
             <div class="hero-img">
                 <img src="images/hero-egg-rolls.jpg" alt="九月九天長地久蛋捲禮盒與蛋捲展示" loading="eager">
@@ -646,43 +595,9 @@
                 </ul>
             </div>
 
-            <form id="orderForm" onsubmit="handleOrderSubmit(event)">
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label for="name">訂購人姓名 *</label>
-                        <input type="text" id="name" name="name" placeholder="請輸入姓名" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">聯絡電話 *</label>
-                        <input type="tel" id="phone" name="phone" placeholder="0912345678" required pattern="[0-9]{9,10}">
-                    </div>
-                    <div class="form-group">
-                        <label for="quantity">訂購組數 *</label>
-                        <select id="quantity" name="quantity" required>
-                            <option value="1">2 盒組（共10支）- NT$ 599 (含運)</option>
-                            <option value="2">4 盒組（共20支）- NT$ 1,150 (省 $48)</option>
-                            <option value="3">6 盒組（共30支）- NT$ 1,680 (團購優惠)</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="payment">付款方式 *</label>
-                        <select id="payment" name="payment" required>
-                            <option value="transfer">銀行轉帳 (ATM)</option>
-                            <option value="linepay">LINE Pay</option>
-                            <option value="cod">超商取貨付款</option>
-                        </select>
-                    </div>
-                    <div class="form-group full-width">
-                        <label for="address">配送地址 / 7-11店號 *</label>
-                        <input type="text" id="address" name="address" placeholder="請填寫完整收件地址或超商門市名稱" required>
-                    </div>
-                    <div class="form-group full-width">
-                        <label for="note">備註說明</label>
-                        <textarea id="note" name="note" rows="3" placeholder="如有希望指定送達時段或其他特殊需求請填寫"></textarea>
-                    </div>
-                </div>
-                <button type="submit" class="submit-btn">確認提交預購訂單</button>
-            </form>
+            <div class="google-form-container">
+                <iframe src="https://docs.google.com/forms/d/1gFF2lg7FNQtPSGkr1hhNbSki3iGe1tqXJ1YNHFsnYW4?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+            </div>
         </section>
 
         <section class="faq-section" id="faq">
@@ -736,16 +651,6 @@
         function toggleFaq(button) {
             const faqItem = button.parentElement;
             faqItem.classList.toggle('active');
-        }
-
-        // 表單送出處理
-        function handleOrderSubmit(event) {
-            event.preventDefault();
-            const formData = new FormData(event.target);
-            const data = Object.fromEntries(formData.entries());
-            
-            alert(`感謝您的預購！\n\n訂購人：${data.name}\n電話：${data.phone}\n組數：${data.quantity} 組\n\n我們將儘快發送簡訊/Email通知您付款細節與出貨時程。`);
-            event.target.reset();
         }
     </script>
 </body>
